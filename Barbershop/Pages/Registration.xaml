@@ -1,0 +1,30 @@
+﻿<Page x:Class="Barbershop.Pages.Registration"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Barbershop.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Registration">
+
+    <Grid>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Width="237">
+            <TextBlock HorizontalAlignment="Center" FontSize="30" Foreground="#ffb8c2">Регистрация</TextBlock>
+            <TextBlock FontSize="15" Margin="0 10 0 0">Введите имя</TextBlock>
+            <TextBox x:Name="NameTextBox" Height="25"></TextBox>
+            <TextBlock FontSize="15" Margin="0 10 0 0">Введите фамилию</TextBlock>
+            <TextBox x:Name="SurnameTextBox" Height="25"></TextBox>
+            <TextBlock FontSize="15" Margin="0 10 0 0">Введите отчество</TextBlock>
+            <TextBox x:Name="PatronymicTextBox" Height="25"></TextBox>
+            <TextBlock FontSize="15" Margin="0 10 0 0">Придумайте логин</TextBlock>
+            <TextBox x:Name="LoginTextBox" Height="25"></TextBox>
+            <TextBlock FontSize="15" Margin="0 10 0 0">Придумайте пароль</TextBlock>
+            <PasswordBox x:Name="PasswordBox" Height="25"/>
+            <Button Height="30" Margin="0 20 0 0" Name="RegButton" Content="Зарегистрироваться" FontWeight="Bold" Click="RegButton_Click"/>
+
+            <TextBlock FontSize="15" Margin="0 10 0 0" Foreground="#7ce670">Уже зарегистрировались?</TextBlock>
+            <Button Height="22" Name="LoginButton" Content="Войти" Click="LoginButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>

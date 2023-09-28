@@ -1,0 +1,24 @@
+﻿<Page x:Class="Barbershop.Pages.Authorization"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Barbershop.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Authorization">
+
+    <Grid>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock FontSize="30" HorizontalAlignment="Center">Авторизация</TextBlock>
+            <TextBlock FontSize="15">Логин</TextBlock>
+            <TextBox x:Name="LoginTextBox" VerticalContentAlignment="Center" Height="25"/>
+            <TextBlock Margin="0 10 0 0" FontSize="15">Пароль</TextBlock>
+            <PasswordBox x:Name="PasswordBox" VerticalAlignment="Stretch" VerticalContentAlignment="Center" Height="25"/>
+            <StackPanel Margin="0 20 0 0" Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Width="90" Padding="5" Margin="0 0 20 0" Name="AuthActionBtn" Content="Войти" Click="AuthActionBtn_Click"/>
+                <Button Width="130" Name="SwitchRegBtn" Content="Зарегистрироваться" Click="SwitchRegBtn_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>
