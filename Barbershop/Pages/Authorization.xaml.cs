@@ -40,7 +40,7 @@ namespace Barbershop.Pages
             employees = new List<Employee>(DBConnection.barberShopEnt.Employee.ToList());
             Employee currentUser = employees.FirstOrDefault(x => x.Login == login && x.Password == password);
             if (currentUser != null)
-                NavigationService.Navigate(new Main("Pages/Main.xaml", UriKind.Relative));
+                NavigationService.Navigate(new Main());
             else
                 MessageBox.Show("Что-то введено неверно. Попробуйте снова");
         }

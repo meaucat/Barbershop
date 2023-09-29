@@ -21,10 +21,33 @@ namespace Barbershop.Pages
     /// </summary>
     public partial class Main : Page
     {
+        public static List<Client> clients { get; set; }
+        public static List<Room> rooms { get; set; }
         public static List<Employee> employees { get; set; }
+        public static List<Report> reports { get; set; }
+        public static List<Service> services { get; set; }
         public Main()
         {
             InitializeComponent();
+            clients = new List<Client>(DBConnection.barberShopEnt.Client.ToList());
+            employees = new List<Employee>(DBConnection.barberShopEnt.Employee.ToList());
+            reports = new List<Report>(DBConnection.barberShopEnt.Report.ToList());
+            this.DataContext = this;
+        }
+
+        private void AddClientActionButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new AddClient());
+        }
+
+        private void LogoutActionButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Authorization());
+        }
+
+        private void AddServiceActionButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new AddService());
         }
     }
 }

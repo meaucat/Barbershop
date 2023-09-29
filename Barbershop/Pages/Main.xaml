@@ -9,6 +9,95 @@
       Title="Main">
 
     <Grid>
-        
+        <StackPanel>
+            <TextBlock FontSize="23" Margin="50 0 0 0"><Run Text="Список клиентов:"/></TextBlock>
+            <TextBlock FontSize="23" Margin="50 200 0 0"><Run Text="Список сотрудников:"/></TextBlock>
+        </StackPanel>
+        <ListView Name="ClientsList"
+                  ItemsSource="{Binding clients}" Margin="48,49,280,241">
+            <ListView.View>
+                <GridView>
+                    <GridView.Columns>
+                        <GridViewColumn Header="ID">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding IDClient}"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Фамилия" Width="150">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding LastName}"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Имя" Width="150">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding NameClient}"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Отчество" Width="150">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Patronymic}"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Зал" Width="140">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock HorizontalAlignment="Center" Text="{Binding Room.NameRoom}"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView.Columns>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Width="126" Height="47" Padding="5" Margin="607,0,0,321" HorizontalAlignment="Left" VerticalAlignment="Bottom" Name="AddEmployeeActionButton" Content="Добавить клиента" Click="AddClientActionButton_Click"/>
+        <Button Width="126" Height="46" Padding="5" Margin="607,0,0,261" HorizontalAlignment="Left" VerticalAlignment="Bottom" Name="AddServiceActionButton" Content="Добавить услугу" Click="AddServiceActionButton_Click"/>
+
+
+        <ListView Name="EmployeeList"
+          ItemsSource="{Binding reports}" Margin="48,269,280,21">
+            <ListView.View>
+                <GridView>
+                    <GridView.Columns>
+                        <GridViewColumn Header="ID">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Employee.IDEmployee}"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Фамилия" Width="150">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Employee.LastName}"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Имя" Width="150">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Employee.FirstName}"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Отчество" Width="150">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Employee.Patronymic}"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView.Columns>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Width="126" Height="30" Padding="5" Margin="607,0,0,21" HorizontalAlignment="Left" VerticalAlignment="Bottom" Name="LogoutActionBtn" Content="Выход" Foreground="#ff6161" Click="LogoutActionButton_Click" RenderTransformOrigin="0.497,1.986"/>
     </Grid>
 </Page>

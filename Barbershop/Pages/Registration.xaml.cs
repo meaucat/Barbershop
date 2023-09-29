@@ -48,7 +48,7 @@ namespace Barbershop.Pages
             employees = new List<Employee>(DBConnection.barberShopEnt.Employee.ToList());
             Employee currentUser = employees.FirstOrDefault(x => x.Login == login && x.Password == password);
 
-            NavigationService.Navigate(new Main(currentUser));
+            NavigationService.Navigate(new Authorization());
         }
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
