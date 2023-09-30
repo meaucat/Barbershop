@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Barbershop"
         mc:Ignorable="d"
-        Title="Парикмахерская мяу мяу" Height="450" Width="800">
+        Title="Парикмахерская мяу мяу" Height="600" Width="900" ResizeMode="NoResize"
+        Icon="/Icon/meow.png">
     <Grid>
         <Frame Source="Pages/Authorization.xaml"/>
     </Grid>

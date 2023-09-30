@@ -14,7 +14,7 @@
             <TextBlock FontSize="23" Margin="50 200 0 0"><Run Text="Список сотрудников:"/></TextBlock>
         </StackPanel>
         <ListView Name="ClientsList"
-                  ItemsSource="{Binding clients}" Margin="48,49,280,241">
+                  ItemsSource="{Binding clients}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="48,36,0,0" Width="472" Height="158">
             <ListView.View>
                 <GridView>
                     <GridView.Columns>
@@ -57,12 +57,12 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button Width="126" Height="47" Padding="5" Margin="607,0,0,321" HorizontalAlignment="Left" VerticalAlignment="Bottom" Name="AddEmployeeActionButton" Content="Добавить клиента" Click="AddClientActionButton_Click"/>
-        <Button Width="126" Height="46" Padding="5" Margin="607,0,0,261" HorizontalAlignment="Left" VerticalAlignment="Bottom" Name="AddServiceActionButton" Content="Добавить услугу" Click="AddServiceActionButton_Click"/>
+        <Button Width="126" Height="47" Padding="5" Margin="0,170,50,0" HorizontalAlignment="Right" VerticalAlignment="Top" Name="AddEmployeeActionButton" Content="Добавить клиента" Click="AddClientActionButton_Click"/>
+        <Button Width="126" Height="46" Padding="5" Margin="0,100,50,0" HorizontalAlignment="Right" VerticalAlignment="Top" Name="AddServiceActionButton" Content="Добавить услугу" Click="AddServiceActionButton_Click"/>
 
 
         <ListView Name="EmployeeList"
-          ItemsSource="{Binding reports}" Margin="48,269,280,21">
+          ItemsSource="{Binding reports}" Margin="48,265,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="472" Height="158">
             <ListView.View>
                 <GridView>
                     <GridView.Columns>
@@ -98,6 +98,6 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button Width="126" Height="30" Padding="5" Margin="607,0,0,21" HorizontalAlignment="Left" VerticalAlignment="Bottom" Name="LogoutActionBtn" Content="Выход" Foreground="#ff6161" Click="LogoutActionButton_Click" RenderTransformOrigin="0.497,1.986"/>
+        <Button Width="126" Height="30" Padding="5" Margin="0,0,50,20" HorizontalAlignment="Right" VerticalAlignment="Bottom" Name="LogoutActionBtn" Content="Выход" Foreground="#ff6161" Click="LogoutActionButton_Click"/>
     </Grid>
 </Page>

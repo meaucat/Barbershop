@@ -42,7 +42,7 @@ namespace Barbershop.Pages
                 service.Cost = decimal.Parse(cost);
                 DBConnection.barberShopEnt.Service.Add(service);
                 DBConnection.barberShopEnt.SaveChanges();
-                this.ServiceList.Items.Refresh();
+                //this.ServiceList.Items.Refresh();
             }
             else
                 MessageBox.Show("Вы ввели что-то неправильно");
